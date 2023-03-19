@@ -12,6 +12,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     border-left: 1px solid #FDAD15;
@@ -23,7 +27,7 @@ html {
 }
 
 #header {
-    position: sticky;
+    position: fixed;
     top: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +82,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .hero {
@@ -223,6 +228,10 @@ button:hover, button:focus, #submit:hover, #submit:focus {
 @media screen and (max-width: 480px) {
     html {
         scroll-padding-top: 6rem;
+    }
+
+    main {
+        margin-top: 6rem;
     }
 
     #logo {
