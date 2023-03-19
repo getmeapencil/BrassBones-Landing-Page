@@ -1,0 +1,244 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    background: #eee;
+    scroll-padding-top: 5rem;
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-left: 1px solid #FDAD15;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FDAD15;
+    border-left: 1px solid #FDAD15;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #eee;
+    text-align: center;
+    z-index: 1;
+}
+
+#logo{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin: 0px 50px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#nav-bar{
+    flex-basis: calc(100%*2/5);
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:focus {
+    outline-color: transparent;
+    outline-style: inset;
+    border-bottom: 2px solid #FDAD15;
+}
+
+h1 {
+    display: inline-block;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem 2.5rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input {
+    width: 20rem;
+    padding: 0.3rem;
+    font-family: 'Space Mono', monospace;
+}
+
+#submit {
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button, #submit {
+    background-color: #ffff00;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 0.5rem;
+}
+
+button:hover, button:focus, #submit:hover, #submit:focus {
+    outline-color: transparent;
+    outline-style: inset;
+    box-shadow: 0px 0px 0px 2px #FDAD15;
+}
+
+#features {
+    padding: 2.5rem;
+}
+
+.grid-container {
+    margin: 0rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    row-gap: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 1rem; */
+}
+
+.feature {
+    max-width: calc(150*5px);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.embed-container { 
+    display: block; 
+    /* width: calc(100%*4/10); */
+    width: 560px;
+    position: relative; 
+    /* padding-bottom: calc(56.25%*4/10);  */
+    padding-bottom: 349px; 
+    height: 0; 
+    overflow: hidden;
+    margin: 2.5rem;
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 4px solid #FDAD15;
+}
+
+#pricing {
+    padding: 0rem 2.5rem 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 300px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-title {
+    background-color: #ddd;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 0.5rem;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #ddd;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+#copyright {
+    color: #444444;
+    font-size:smaller;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        scroll-padding-top: 6rem;
+    }
+
+    #logo {
+        justify-content: center;
+    }
+
+    #features {
+        padding: 1.5rem;
+    }
+
+    .embed-container { 
+        width: calc(100%*9/10);
+        padding-bottom: calc(56.25%*9/10); 
+    } 
+
+    .grid-container {
+        margin: 0.5rem 2rem;
+        grid-template-columns: 1fr;
+        row-gap: 0rem;
+    }
+    
+    .feature {
+        padding-left: 0rem;
+        text-align: center;
+    }
+}
