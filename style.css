@@ -12,10 +12,6 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
     width: 5px;
     border-left: 1px solid #FDAD15;
