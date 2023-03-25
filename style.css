@@ -225,7 +225,7 @@ button:hover, button:focus, #submit:hover, #submit:focus {
     font-size:smaller;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
     html {
         scroll-padding-top: 6rem;
     }
@@ -236,6 +236,10 @@ button:hover, button:focus, #submit:hover, #submit:focus {
 
     #logo {
         justify-content: center;
+    }
+
+    #nav-bar{
+        gap: 2.5rem;
     }
 
     #features {
